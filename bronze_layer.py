@@ -1,3 +1,4 @@
+import glob
 import os
 from pyspark.sql import functions as F
 
@@ -50,3 +51,30 @@ def ingest_readings(spark, file_paths, run_id):
 
     return df, file_info
 
+def ingest_events(spark, run_id):
+    # Ingest all meter_events_*.csv files in the raw layer
+    # Events are not used by the readings output but are ingested for completeness and potential future use
+    paths = sorted(glob.glob(os.path.join(config.RAW_EVENTS_DIR, "*.csv")))
+    if not paths:
+        print("No event files to process.")
+        return 0
+    df = (
+        spark.read.schema(config.EVENTS_SCHEMA).option("header", True).csv(paths)
+        .withColumn("source_file", F.element_at(F.split(F.input_file_name(), "/"), -1))
+        .withColumn("ingestion_timestamp", F.lit(spark_utils.now_str()))
+        .withColumn("run_id", F.lit(run_id))
+    )
+    n = df.count()
+    df.write.mode("overwrite").partitionBy("source_file").parquet(config.BRONZE_DIR+"/events")
+    return n
+
+def load_dimensions(spark):
+    def _csv(path, schema):
+        return spark.read.schema(schema).option("header", True).csv(path)
+
+    return {
+        "meters":    _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "meters.csv"),    config.METERS_SCHEMA),
+        "buildings": _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "buildings.csv"), config.BUILDINGS_SCHEMA),
+        "regions":   _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "regions.csv"),   config.REGIONS_SCHEMA),
+        "tariffs":   _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "tariffs.csv"),   config.TARIFFS_SCHEMA),
+    }

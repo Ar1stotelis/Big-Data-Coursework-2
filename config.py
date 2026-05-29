@@ -5,7 +5,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_DATA_DIR = os.path.join(PROJECT_ROOT, 'data', 'raw')
 RAW_READINGS_DIR = os.path.join(RAW_DATA_DIR, 'meter_readings') # Readings directory
 RAW_EVENTS_DIR = os.path.join(RAW_DATA_DIR, 'meter_events') # Events directory
-RAW_REF_DIR = os.path.join(RAW_DATA_DIR, 'reference') # Reference data directory
+RAW_DIMENSIONS_DIR = os.path.join(RAW_DATA_DIR, 'dimensions') # Dimensions directory
 
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "output")
 BRONZE_DIR = os.path.join(OUTPUT_DIR, "bronze")
