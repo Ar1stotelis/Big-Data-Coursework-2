@@ -31,3 +31,11 @@ TARIFFS_SCHEMA = ("tariff_id STRING, region_id STRING, valid_from STRING, valid_
                     "tariff_type STRING, price_per_kwh DOUBLE, peak_period_flag STRING")
 EVENTS_SCHEMA = ("event_id STRING, meter_id STRING, event_timestamp STRING, "
                     "event_type STRING, severity STRING, description STRING")
+
+# data rules
+TIMESTAMP_FMT = "yyyy-MM-dd HH:mm:ss"
+ALLOWED_READING_TYPES = ["actual", "estimated", "corrected", "manual_correction"]
+# A reading is a correction and supersedes other values when it comes from
+CORRECTION_SOURCE_SYSTEMS = "manual_correction"
+MIN_ENERGY_KWH = 0.0 # no negatives
+MAX_ENERGY_KWH = 100000.0 # Need to further check data
