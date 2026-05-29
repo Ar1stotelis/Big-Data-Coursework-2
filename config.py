@@ -1,18 +1,20 @@
 import os
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 RAW_DATA_DIR = os.path.join(PROJECT_ROOT, 'data', 'raw')
 RAW_READINGS_DIR = os.path.join(RAW_DATA_DIR, 'meter_readings') # Readings directory
 RAW_EVENTS_DIR = os.path.join(RAW_DATA_DIR, 'meter_events') # Events directory
-RAW_DIMENSIONS_DIR = os.path.join(RAW_DATA_DIR, 'dimensions') # Dimensions directory
+RAW_DIMENSIONS_DIR = os.path.join(RAW_DATA_DIR, 'reference') # Dimensions directory
 
-OUTPUT_DIR = os.path.join(PROJECT_ROOT, "output")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, "data", "output")
 BRONZE_DIR = os.path.join(OUTPUT_DIR, "bronze")
 SILVER_DIR = os.path.join(OUTPUT_DIR, "silver")
 GOLD_DIR = os.path.join(OUTPUT_DIR, "gold")
 PROBLEMATIC_DIR = os.path.join(OUTPUT_DIR, "problematic")
-
+CONTROL_DIR = os.path.join(OUTPUT_DIR, "control")
+CONTROL_FILES = os.path.join(CONTROL_DIR, "processed_files")
+CONTROL_RUNS = os.path.join(CONTROL_DIR, "runs")
 
 # Explicit data schema definitions for raw data
 

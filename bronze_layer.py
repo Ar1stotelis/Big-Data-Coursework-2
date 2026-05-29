@@ -73,8 +73,9 @@ def load_dimensions(spark):
         return spark.read.schema(schema).option("header", True).csv(path)
 
     return {
-        "meters":    _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "meters.csv"),    config.METERS_SCHEMA),
+        "meters": _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "meters.csv"),    config.METERS_SCHEMA),
         "buildings": _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "buildings.csv"), config.BUILDINGS_SCHEMA),
-        "regions":   _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "regions.csv"),   config.REGIONS_SCHEMA),
-        "tariffs":   _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "tariffs.csv"),   config.TARIFFS_SCHEMA),
+        "regions": _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "regions.csv"),   config.REGIONS_SCHEMA),
+        "tariffs": _csv(os.path.join(config.RAW_DIMENSIONS_DIR, "tariffs.csv"),   config.TARIFFS_SCHEMA),
     }
+
