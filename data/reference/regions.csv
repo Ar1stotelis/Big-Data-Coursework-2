@@ -1,0 +1,11 @@
+region_id,region_name,country,climate_zone
+1,London North,UK,temperate
+2,London South,UK,temperate
+3,Manchester,UK,temperate
+4,Birmingham,UK,temperate
+5,Berlin,DE,temperate
+6,Munich,DE,temperate
+7,Paris,FR,temperate
+8,Lyon,FR,temperate
+9,Madrid,ES,warm
+10,Barcelona,ES,warm
