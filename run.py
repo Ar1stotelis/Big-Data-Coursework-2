@@ -8,6 +8,7 @@ import bronze_layer
 import silver_layer
 import spark_utils
 import bronze_layer
+import gold_layer
 def discover_reading_files():
     # Discover all meter_readings_*.csv files in the raw layer
     paths = sorted(glob.glob(os.path.join(config.RAW_READINGS_DIR, "meter_readings_*.csv")))
@@ -64,6 +65,49 @@ def main():
     silver_layer.write_rejected(rejected)
 
     # GOLD
+    print("Building gold layer...")
+    gold_daily = gold_layer.daily_consumption(clean)
+    gold_complete = gold_layer.meter_completeness(spark, clean)
+    gold_peak = gold_layer.peak_demand(clean)
+    gold_rej = gold_layer.rejected_summary(rejected)
+    gold_health = gold_layer.meter_health(spark, clean, rejected, dup_counts)
+    gold_layer.write(gold_daily, "daily_consumption")
+    gold_layer.write(gold_complete, "meter_completeness")
+    gold_layer.write(gold_peak, "peak_demand")
+    gold_layer.write(gold_rej, "rejected_summary")
+    gold_layer.write(gold_health, "meter_health")
+    # control and tracking
+
+    print("Recording control tables...")
+    spark_utils.record_files(spark, run_id, file_info)
+    finished_at = spark_utils.now_str()
+    spark_utils.record_run(spark, {
+        "run_id": run_id,
+        "started_at": started_at,
+        "finished_at": finished_at,
+        "status": "success",
+        "files_processed": len(files),
+        "rows_in": rows_in,
+        "rows_clean": rows_clean,
+        "rows_rejected": rows_rejected,
+    })
+
+    # PREVIEWS
+    print(f"\nrows_in (this run) = {rows_in} | clean (total) = {rows_clean} | "
+            f"rejected (total) = {rows_rejected}")
+    print(f"\n{'-'*10}  rejected_summary {'-'*10} ")
+    gold_rej.show(truncate=False)
+    print(f"\n{'-'*10} daily_consumption (sample) {'-'*10} ")
+    gold_daily.show(10, truncate=False)
+    print(f"\n{'-'*10}  meter_health (least reliable 10) {'-'*10} ")
+    gold_health.show(10, truncate=False)
+    print(f"\n{'-'*10} pipeline_runs {'-'*10}  ")
+    spark.read.parquet(config.CONTROL_RUNS).orderBy("started_at").show(truncate=False)
+
+    print(f"\nRun {run_id} finished at {finished_at}")
+    spark.stop()
+
+
 
 
 

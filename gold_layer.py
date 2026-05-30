@@ -40,7 +40,8 @@ def meter_completeness(spark, clean):
     dates = clean.select("reading_date").distinct()
     grid = active.crossJoin(dates)
 
-    actual = clean.groupBy
+    actual = (clean.groupBy("meter_id", "reading_date")
+              .agg(F.count("*").alias("readings_received")))
 
     return (
         grid.join(actual, ["meter_id", "reading_date"], "left")
