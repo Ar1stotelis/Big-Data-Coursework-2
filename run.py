@@ -5,6 +5,7 @@ import glob
 import os
 import config
 import bronze_layer
+import silver_layer
 import spark_utils
 import bronze_layer
 def discover_reading_files():
@@ -46,10 +47,25 @@ def main():
 
 
     # BRONZE LAYER
+    print("Ingesting bronze layer...")
     batch_df, file_info = bronze_layer.ingest_readings(spark, files, run_id)
     rows_in = sum(i["rows_in"] for i in file_info)
     bronze_layer.ingest_events(spark, run_id)
     dimensions = bronze_layer.load_dimensions(spark)
+
+    # SILVER LAYER
+    print("Building silver layer...")
+    clean, rejected = silver_layer.build(spark, dimensions)
+    clean = clean.cache() # cache for counting and writing
+    rejected = rejected.cache()
+    rows_clean = clean.count()
+    rows_rejected = rejected.count()
+    silver_layer.write_clean(clean)
+    silver_layer.write_rejected(rejected)
+
+    # GOLD
+
+
 
 if __name__ == "__main__":
     main()

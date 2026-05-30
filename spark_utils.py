@@ -53,3 +53,20 @@ FILE_SCHEMA = T.StructType([
     T.StructField("rows_in", T.LongType()),
 ])
 
+def record_files(spark, run_id, file_infos):
+    # file_infos: list of dicts {file_name, file_path, status, rows_in}
+    if not file_infos:
+        return
+    rows = [(run_id, fi["file_name"], fi["file_path"], now_str(),
+            fi["status"], int(fi["rows_in"])) for fi in file_infos]
+    df = spark.createDataFrame(rows, FILE_SCHEMA)
+    df.write.mode("append").parquet(config.CONTROL_FILES)
+
+
+def record_run(spark, run):
+    # run: dict matching RUN_SCHEMA fields
+    rows = [(run["run_id"], run["started_at"], run["finished_at"], run["status"],
+            int(run["files_processed"]), int(run["rows_in"]),
+            int(run["rows_clean"]), int(run["rows_rejected"]))]
+    df = spark.createDataFrame(rows, RUN_SCHEMA)
+    df.write.mode("append").parquet(config.CONTROL_RUNS)
