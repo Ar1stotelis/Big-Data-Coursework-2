@@ -1,4 +1,3 @@
-
 from pyspark.sql import functions as F, Window
 
 import config
@@ -52,7 +51,7 @@ def build(spark, dims):
 
     parsed = bronze.withColumn("ts", F.try_to_timestamp(F.col("reading_timestamp"), F.lit(config.TIMESTAMP_FMT))) \
         .withColumn("energy", F.col("energy_kwh").cast("double")) \
-        .withColumn("reading_type_norm", F.lower(F.col("reading_type"))) \
+        .withColumn("reading_type_norm", F.lower(F.trim(F.col("reading_type")))) \
         .join(F.broadcast(meters_dim), "meter_id", "left") # broadcast join to avoid shuffle on readings
 
     tagged = parsed.withColumn("reject_reason", _reject_reason())
@@ -73,7 +72,24 @@ def build(spark, dims):
         F.col("ingestion_timestamp").desc(), # then latest ingested
         F.col("reading_id").desc(), # then highest reading_id
     )
-    deduped = valid.withColumn("rank", F.row_number().over(window)).filter(F.col("rank") == 1).drop("rank")
+    ranked = valid.withColumn("rank", F.row_number().over(window))
+    # The rows that did not win the dedup have a rank above 1, they are duplicates that got superseded
+    # we count them per meter so the meter health output in Gold can report them
+    dup_counts = (ranked.filter(F.col("rank") > 1)
+                  .groupBy("meter_id")
+                  .agg(F.count("*").alias("n_duplicate_readings")))
+    deduped = ranked.filter(F.col("rank") == 1).drop("rank")
+
+    # Late arrival flag, a reading whose own day is before the day of the file that delivered it
+    # the file date is read from the source_file name which looks like _YYYY_MM_DD.csv
+    file_date = F.to_date(
+        F.regexp_extract(F.col("source_file"), r"(\d{4})_(\d{2})_(\d{2})", 0),
+        "yyyy_MM_dd",
+    )
+    deduped = deduped.withColumn(
+        "is_late_arrival",
+        (file_date.isNotNull() & (F.to_date("ts") < file_date)),
+    )
 
     buildings = dims["buildings"].select(
         "building_id","region_id", "building_type")
@@ -91,11 +107,11 @@ def build(spark, dims):
             F.col("energy").alias("energy_kwh"),
             "voltage", "current", "power_factor",
             F.col("reading_type_norm").alias("reading_type"), "source_system",
-            "meter_status",
+            "meter_status", "is_late_arrival",
             "source_file", "ingestion_timestamp", "run_id",
         )
     )
-    return clean, rejected
+    return clean, rejected, dup_counts
 
 def write_clean(clean):
     (clean.write.mode("overwrite").partitionBy("reading_date")

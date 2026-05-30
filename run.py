@@ -55,7 +55,7 @@ def main():
 
     # SILVER LAYER
     print("Building silver layer...")
-    clean, rejected = silver_layer.build(spark, dimensions)
+    clean, rejected, dup_counts = silver_layer.build(spark, dimensions)
     clean = clean.cache() # cache for counting and writing
     rejected = rejected.cache()
     rows_clean = clean.count()
