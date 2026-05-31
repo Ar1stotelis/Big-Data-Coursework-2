@@ -15,3 +15,5 @@ If you only care about specific files you can name them and it will process just
 python run.py --files "meter_readings_2026_01_01.csv,meter_readings_2026_01_02.csv"
 
 Everything the pipeline produces ends up under data/output, with the bronze, silver and gold layers in their own folders, the rejected records under problematic and the run history under control. The final reporting tables are also written out as single csv files in data/output/gold/_csv so they can be opened directly in Power BI without having to deal with the parquet folders.
+
+To put the data in PowerBI the _csv file can be used which contains all data that needs to be loaded in the PowerBI dashboard. This can be done by going to the get data button and then text/csv option. Otherwise the data source can be adjusted by clicking the arrow menu below transform data under the home ribbon and editing data source settings.
