@@ -1,0 +1,6 @@
+reject_reason,n_rejected
+inactive_meter,28738
+invalid_energy,992
+missing_meter_id,665
+unknown_meter_id,497
+invalid_timestamp,328

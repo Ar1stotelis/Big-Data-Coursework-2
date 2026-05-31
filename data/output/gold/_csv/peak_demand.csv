@@ -1,0 +1,241 @@
+region_name,reading_hour,total_kwh,rank_in_region,is_peak_hour
+Barcelona,0,994.975,23,false
+Barcelona,1,1001.204,22,false
+Barcelona,2,1004.94,21,false
+Barcelona,3,1014.31,19,false
+Barcelona,4,1011.881,20,false
+Barcelona,5,1090.394,17,false
+Barcelona,6,1343.49,14,false
+Barcelona,7,1486.148,11,false
+Barcelona,8,1796.073,8,false
+Barcelona,9,1878.439,6,false
+Barcelona,10,1969.402,3,false
+Barcelona,11,1972.363,2,false
+Barcelona,12,1974.682,1,true
+Barcelona,13,1952.829,4,false
+Barcelona,14,1895.979,5,false
+Barcelona,15,1806.4,7,false
+Barcelona,16,1718.998,9,false
+Barcelona,17,1718.552,10,false
+Barcelona,18,1389.231,13,false
+Barcelona,19,1418.718,12,false
+Barcelona,20,1277.98,15,false
+Barcelona,21,1215.441,16,false
+Barcelona,22,1026.42,18,false
+Barcelona,23,987.509,24,false
+Berlin,0,962.328,22,false
+Berlin,1,958.29,23,false
+Berlin,2,970.842,19,false
+Berlin,3,963.185,21,false
+Berlin,4,963.717,20,false
+Berlin,5,1061.408,17,false
+Berlin,6,1366.636,14,false
+Berlin,7,1424.545,11,false
+Berlin,8,1607.471,8,false
+Berlin,9,1647.922,6,false
+Berlin,10,1698.512,3,false
+Berlin,11,1711.075,1,true
+Berlin,12,1706.124,2,false
+Berlin,13,1690.531,4,false
+Berlin,14,1663.72,5,false
+Berlin,15,1585.272,9,false
+Berlin,16,1539.953,10,false
+Berlin,17,1630.28,7,false
+Berlin,18,1417.318,12,false
+Berlin,19,1410.485,13,false
+Berlin,20,1362.664,15,false
+Berlin,21,1317.306,16,false
+Berlin,22,995.784,18,false
+Berlin,23,950.542,24,false
+Birmingham,0,463.234,19,false
+Birmingham,1,456.277,23,false
+Birmingham,2,454.598,24,false
+Birmingham,3,457.671,22,false
+Birmingham,4,462.272,20,false
+Birmingham,5,502.75,17,false
+Birmingham,6,681.813,12,false
+Birmingham,7,697.079,11,false
+Birmingham,8,774.334,3,false
+Birmingham,9,759.615,8,false
+Birmingham,10,769.027,5,false
+Birmingham,11,779.8,1,true
+Birmingham,12,777.678,2,false
+Birmingham,13,769.383,4,false
+Birmingham,14,768.676,6,false
+Birmingham,15,739.097,9,false
+Birmingham,16,732.34,10,false
+Birmingham,17,763.89,7,false
+Birmingham,18,649.729,13,false
+Birmingham,19,642.756,14,false
+Birmingham,20,638.472,15,false
+Birmingham,21,634.622,16,false
+Birmingham,22,465.841,18,false
+Birmingham,23,460.063,21,false
+London North,0,828.951,22,false
+London North,1,822.195,23,false
+London North,2,850.246,19,false
+London North,3,851.608,18,false
+London North,4,845.446,20,false
+London North,5,882.846,17,false
+London North,6,1035.318,13,false
+London North,7,1112.766,11,false
+London North,8,1232.484,7,false
+London North,9,1255.122,6,false
+London North,10,1323.637,3,false
+London North,11,1342.382,1,true
+London North,12,1333.618,2,false
+London North,13,1296.925,4,false
+London North,14,1277.21,5,false
+London North,15,1197.681,8,false
+London North,16,1160.296,9,false
+London North,17,1159.136,10,false
+London North,18,1021.152,14,false
+London North,19,1037.584,12,false
+London North,20,996.95,15,false
+London North,21,980.302,16,false
+London North,22,833.664,21,false
+London North,23,807.535,24,false
+London South,0,433.798,20,false
+London South,1,431.814,22,false
+London South,2,439.974,19,false
+London South,3,433.446,21,false
+London South,4,442.065,18,false
+London South,5,467.478,17,false
+London South,6,571.662,12,false
+London South,7,592.433,11,false
+London South,8,784.165,5,false
+London South,9,784.301,4,false
+London South,10,795.901,2,false
+London South,11,786.908,3,false
+London South,12,798.907,1,true
+London South,13,778.464,6,false
+London South,14,762.674,7,false
+London South,15,720.209,8,false
+London South,16,703.628,10,false
+London South,17,714.522,9,false
+London South,18,532.755,14,false
+London South,19,546.095,13,false
+London South,20,482.236,16,false
+London South,21,496.544,15,false
+London South,22,426.657,23,false
+London South,23,420.469,24,false
+Lyon,0,416.628,23,false
+Lyon,1,423.853,21,false
+Lyon,2,425.188,20,false
+Lyon,3,422.094,22,false
+Lyon,4,426.975,19,false
+Lyon,5,460.169,17,false
+Lyon,6,595.937,14,false
+Lyon,7,651.739,13,false
+Lyon,8,837.582,10,false
+Lyon,9,892.713,6,false
+Lyon,10,925.438,3,false
+Lyon,11,934.445,1,true
+Lyon,12,928.933,2,false
+Lyon,13,911.368,5,false
+Lyon,14,912.371,4,false
+Lyon,15,867.595,8,false
+Lyon,16,840.083,9,false
+Lyon,17,872.774,7,false
+Lyon,18,685.037,11,false
+Lyon,19,675.849,12,false
+Lyon,20,594.588,15,false
+Lyon,21,553.157,16,false
+Lyon,22,446.789,18,false
+Lyon,23,414.961,24,false
+Madrid,0,514.965,23,false
+Madrid,1,523.1,21,false
+Madrid,2,524.627,19,false
+Madrid,3,522.005,22,false
+Madrid,4,526.358,18,false
+Madrid,5,572.813,17,false
+Madrid,6,663.566,15,false
+Madrid,7,732.206,11,false
+Madrid,8,851.935,7,false
+Madrid,9,886.045,6,false
+Madrid,10,923.49,3,false
+Madrid,11,940.533,1,true
+Madrid,12,933.114,2,false
+Madrid,13,916.272,4,false
+Madrid,14,890.132,5,false
+Madrid,15,802.487,8,false
+Madrid,16,752.862,10,false
+Madrid,17,771.44,9,false
+Madrid,18,686.238,13,false
+Madrid,19,694.53,12,false
+Madrid,20,680.312,14,false
+Madrid,21,649.629,16,false
+Madrid,22,523.966,20,false
+Madrid,23,505.096,24,false
+Manchester,0,1190.267,23,false
+Manchester,1,1204.844,22,false
+Manchester,2,1210.411,20,false
+Manchester,3,1218.686,19,false
+Manchester,4,1235.607,18,false
+Manchester,5,1280.528,17,false
+Manchester,6,1492.615,14,false
+Manchester,7,1570.834,11,false
+Manchester,8,1685.089,7,false
+Manchester,9,1720.378,3,false
+Manchester,10,1740.638,2,false
+Manchester,11,1747.048,1,true
+Manchester,12,1713.163,4,false
+Manchester,13,1709.543,5,false
+Manchester,14,1695.195,6,false
+Manchester,15,1665.016,8,false
+Manchester,16,1611.25,10,false
+Manchester,17,1661.288,9,false
+Manchester,18,1500.507,13,false
+Manchester,19,1517.812,12,false
+Manchester,20,1438.75,15,false
+Manchester,21,1407.105,16,false
+Manchester,22,1208.382,21,false
+Manchester,23,1166.066,24,false
+Munich,0,708.887,22,false
+Munich,1,717.053,21,false
+Munich,2,728.78,20,false
+Munich,3,736.982,19,false
+Munich,4,741.714,18,false
+Munich,5,776.386,17,false
+Munich,6,858.863,12,false
+Munich,7,891.428,11,false
+Munich,8,1034.744,5,false
+Munich,9,1047.776,4,false
+Munich,10,1065.547,1,true
+Munich,11,1053.713,3,false
+Munich,12,1053.832,2,false
+Munich,13,1019.621,6,false
+Munich,14,1017.582,7,false
+Munich,15,948.658,9,false
+Munich,16,926.567,10,false
+Munich,17,954.162,8,false
+Munich,18,839.096,14,false
+Munich,19,847.368,13,false
+Munich,20,818.457,15,false
+Munich,21,795.819,16,false
+Munich,22,704.99,23,false
+Munich,23,699.904,24,false
+Paris,0,721.379,23,false
+Paris,1,741.719,22,false
+Paris,2,745.875,20,false
+Paris,3,758.499,18,false
+Paris,4,746.244,19,false
+Paris,5,780.937,17,false
+Paris,6,921.629,12,false
+Paris,7,976.595,11,false
+Paris,8,1095.906,7,false
+Paris,9,1138.307,5,false
+Paris,10,1161.344,2,false
+Paris,11,1164.789,1,true
+Paris,12,1146.706,3,false
+Paris,13,1144.752,4,false
+Paris,14,1113.762,6,false
+Paris,15,1062.188,8,false
+Paris,16,1038.776,9,false
+Paris,17,1030.598,10,false
+Paris,18,906.727,14,false
+Paris,19,914.263,13,false
+Paris,20,874.931,15,false
+Paris,21,842.256,16,false
+Paris,22,742.014,21,false
+Paris,23,712.979,24,false

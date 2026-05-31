@@ -1,0 +1,393 @@
+reading_date,region_name,building_type,total_kwh,n_readings,n_meters
+2026-01-01,Barcelona,factory,868.816,380,4
+2026-01-01,Barcelona,hospital,1621.552,850,9
+2026-01-01,Barcelona,office,1232.657,1890,20
+2026-01-01,Barcelona,residential,927.371,2829,30
+2026-01-01,Barcelona,retail,492.341,851,9
+2026-01-01,Barcelona,school,58.012,286,3
+2026-01-01,Berlin,factory,2321.548,938,10
+2026-01-01,Berlin,hospital,354.525,191,2
+2026-01-01,Berlin,office,253.22,472,5
+2026-01-01,Berlin,residential,1134.079,2831,30
+2026-01-01,Berlin,retail,414.554,658,7
+2026-01-01,Berlin,school,224.261,857,9
+2026-01-01,Birmingham,factory,1313.534,470,5
+2026-01-01,Birmingham,office,143.026,282,3
+2026-01-01,Birmingham,residential,581.59,1501,16
+2026-01-01,Birmingham,school,167.422,661,7
+2026-01-01,London North,factory,1020.63,375,4
+2026-01-01,London North,hospital,1518.869,848,9
+2026-01-01,London North,office,107.943,190,2
+2026-01-01,London North,residential,500.958,1318,14
+2026-01-01,London North,retail,336.726,665,7
+2026-01-01,London North,school,177.99,659,7
+2026-01-01,London South,factory,289.742,95,1
+2026-01-01,London South,hospital,679.478,283,3
+2026-01-01,London South,office,698.576,1136,12
+2026-01-01,London South,residential,290.117,844,9
+2026-01-01,London South,school,205.887,853,9
+2026-01-01,Lyon,factory,295.238,96,1
+2026-01-01,Lyon,hospital,351.823,189,2
+2026-01-01,Lyon,office,848.411,1317,14
+2026-01-01,Lyon,residential,495.038,1314,14
+2026-01-01,Lyon,retail,324.723,566,6
+2026-01-01,Lyon,school,120.431,469,5
+2026-01-01,Madrid,factory,588.514,287,3
+2026-01-01,Madrid,hospital,917.836,471,5
+2026-01-01,Madrid,residential,553.807,1517,16
+2026-01-01,Madrid,retail,219.481,376,4
+2026-01-01,Madrid,school,182.538,665,7
+2026-01-01,Manchester,factory,1315.743,468,5
+2026-01-01,Manchester,hospital,2153.322,952,10
+2026-01-01,Manchester,office,469.855,853,9
+2026-01-01,Manchester,residential,653.401,1605,17
+2026-01-01,Manchester,retail,523.348,944,10
+2026-01-01,Manchester,school,53.675,187,2
+2026-01-01,Munich,factory,288.978,95,1
+2026-01-01,Munich,hospital,1616.282,854,9
+2026-01-01,Munich,office,324.528,567,6
+2026-01-01,Munich,residential,473.401,1321,14
+2026-01-01,Munich,retail,162.496,281,3
+2026-01-01,Munich,school,206.613,752,8
+2026-01-01,Paris,factory,867.822,283,3
+2026-01-01,Paris,hospital,1251.54,567,6
+2026-01-01,Paris,office,343.114,750,8
+2026-01-01,Paris,residential,428.131,1231,13
+2026-01-01,Paris,retail,282.309,477,5
+2026-01-01,Paris,school,85.234,382,4
+2026-01-02,Barcelona,factory,853.748,378,4
+2026-01-02,Barcelona,hospital,1615.761,850,9
+2026-01-02,Barcelona,office,1231.15,1887,20
+2026-01-02,Barcelona,residential,918.963,2819,30
+2026-01-02,Barcelona,retail,492.748,850,9
+2026-01-02,Barcelona,school,57.293,280,3
+2026-01-02,Berlin,factory,2351.136,945,10
+2026-01-02,Berlin,hospital,355.982,192,2
+2026-01-02,Berlin,office,253.545,474,5
+2026-01-02,Berlin,residential,1140.988,2845,30
+2026-01-02,Berlin,retail,419.83,661,7
+2026-01-02,Berlin,school,223.669,853,9
+2026-01-02,Birmingham,factory,1331.823,475,5
+2026-01-02,Birmingham,office,144.672,285,3
+2026-01-02,Birmingham,residential,583.017,1510,16
+2026-01-02,Birmingham,school,168.382,667,7
+2026-01-02,London North,factory,1036.967,379,4
+2026-01-02,London North,hospital,1530.363,852,9
+2026-01-02,London North,office,109.021,191,2
+2026-01-02,London North,residential,497.515,1318,14
+2026-01-02,London North,retail,337.308,660,7
+2026-01-02,London North,school,177.852,660,7
+2026-01-02,London South,factory,288.233,94,1
+2026-01-02,London South,hospital,670.234,281,3
+2026-01-02,London South,office,697.943,1138,12
+2026-01-02,London South,residential,294.475,850,9
+2026-01-02,London South,school,205.394,854,9
+2026-01-02,Lyon,factory,296.047,96,1
+2026-01-02,Lyon,hospital,353.273,190,2
+2026-01-02,Lyon,office,851.334,1327,14
+2026-01-02,Lyon,residential,495.365,1315,14
+2026-01-02,Lyon,retail,327.974,568,6
+2026-01-02,Lyon,school,120.346,471,5
+2026-01-02,Madrid,factory,578.753,283,3
+2026-01-02,Madrid,hospital,922.233,473,5
+2026-01-02,Madrid,residential,555.609,1514,16
+2026-01-02,Madrid,retail,218.786,376,4
+2026-01-02,Madrid,school,182.497,667,7
+2026-01-02,Manchester,factory,1321.666,474,5
+2026-01-02,Manchester,hospital,2129.229,946,10
+2026-01-02,Manchester,office,472.079,854,9
+2026-01-02,Manchester,residential,650.795,1608,17
+2026-01-02,Manchester,retail,527.298,949,10
+2026-01-02,Manchester,school,55.926,191,2
+2026-01-02,Munich,factory,296.48,95,1
+2026-01-02,Munich,hospital,1604.613,852,9
+2026-01-02,Munich,office,326.001,568,6
+2026-01-02,Munich,residential,473.621,1318,14
+2026-01-02,Munich,retail,165.457,285,3
+2026-01-02,Munich,school,207.824,756,8
+2026-01-02,Paris,factory,871.37,284,3
+2026-01-02,Paris,hospital,1259.717,569,6
+2026-01-02,Paris,office,346.062,753,8
+2026-01-02,Paris,residential,424.714,1224,13
+2026-01-02,Paris,retail,279.772,469,5
+2026-01-02,Paris,school,85.371,378,4
+2026-01-03,Barcelona,factory,845.02,377,4
+2026-01-03,Barcelona,hospital,1623.778,857,9
+2026-01-03,Barcelona,office,645.092,1892,20
+2026-01-03,Barcelona,residential,923.37,2832,30
+2026-01-03,Barcelona,retail,447.071,853,9
+2026-01-03,Barcelona,school,30.618,281,3
+2026-01-03,Berlin,factory,2341.641,940,10
+2026-01-03,Berlin,hospital,353.664,191,2
+2026-01-03,Berlin,office,146.828,472,5
+2026-01-03,Berlin,residential,1135.185,2836,30
+2026-01-03,Berlin,retail,369.632,663,7
+2026-01-03,Berlin,school,131.895,851,9
+2026-01-03,Birmingham,factory,1334.473,476,5
+2026-01-03,Birmingham,office,71.247,283,3
+2026-01-03,Birmingham,residential,584.198,1509,16
+2026-01-03,Birmingham,school,114.08,661,7
+2026-01-03,London North,factory,1025.671,379,4
+2026-01-03,London North,hospital,1535.476,854,9
+2026-01-03,London North,office,53.351,189,2
+2026-01-03,London North,residential,503.325,1329,14
+2026-01-03,London North,retail,297.896,662,7
+2026-01-03,London North,school,118.771,661,7
+2026-01-03,London South,factory,289.605,94,1
+2026-01-03,London South,hospital,679.137,281,3
+2026-01-03,London South,office,362.392,1136,12
+2026-01-03,London South,residential,288.423,843,9
+2026-01-03,London South,school,133.978,851,9
+2026-01-03,Lyon,factory,294.509,95,1
+2026-01-03,Lyon,hospital,349.396,189,2
+2026-01-03,Lyon,office,455.59,1320,14
+2026-01-03,Lyon,residential,497.264,1319,14
+2026-01-03,Lyon,retail,290.616,566,6
+2026-01-03,Lyon,school,74.406,471,5
+2026-01-03,Madrid,factory,577.161,282,3
+2026-01-03,Madrid,hospital,937.724,474,5
+2026-01-03,Madrid,residential,554.961,1515,16
+2026-01-03,Madrid,retail,193.977,377,4
+2026-01-03,Madrid,school,95.132,656,7
+2026-01-03,Manchester,factory,1321.772,472,5
+2026-01-03,Manchester,hospital,2124.257,943,10
+2026-01-03,Manchester,office,248.136,846,9
+2026-01-03,Manchester,residential,657.82,1608,17
+2026-01-03,Manchester,retail,478.385,952,10
+2026-01-03,Manchester,school,42.059,191,2
+2026-01-03,Munich,factory,287.466,95,1
+2026-01-03,Munich,hospital,1618.119,850,9
+2026-01-03,Munich,office,181.555,572,6
+2026-01-03,Munich,residential,479.082,1322,14
+2026-01-03,Munich,retail,147.768,285,3
+2026-01-03,Munich,school,123.285,758,8
+2026-01-03,Paris,factory,875.977,286,3
+2026-01-03,Paris,hospital,1258.25,566,6
+2026-01-03,Paris,office,191.15,757,8
+2026-01-03,Paris,residential,432.201,1231,13
+2026-01-03,Paris,retail,252.357,467,5
+2026-01-03,Paris,school,45.547,382,4
+2026-01-04,Barcelona,factory,862.962,379,4
+2026-01-04,Barcelona,hospital,1618.053,852,9
+2026-01-04,Barcelona,office,646.148,1891,20
+2026-01-04,Barcelona,residential,924.278,2829,30
+2026-01-04,Barcelona,retail,442.531,852,9
+2026-01-04,Barcelona,school,30.992,285,3
+2026-01-04,Berlin,factory,2365.614,950,10
+2026-01-04,Berlin,hospital,352.657,190,2
+2026-01-04,Berlin,office,146.445,475,5
+2026-01-04,Berlin,residential,1136.923,2837,30
+2026-01-04,Berlin,retail,368.833,656,7
+2026-01-04,Berlin,school,131.439,854,9
+2026-01-04,Birmingham,factory,1322.723,471,5
+2026-01-04,Birmingham,office,71.957,282,3
+2026-01-04,Birmingham,residential,584.307,1506,16
+2026-01-04,Birmingham,school,113.776,662,7
+2026-01-04,London North,factory,1038.526,378,4
+2026-01-04,London North,hospital,1533.071,852,9
+2026-01-04,London North,office,52.94,189,2
+2026-01-04,London North,residential,501.827,1321,14
+2026-01-04,London North,retail,303.338,666,7
+2026-01-04,London North,school,120.76,661,7
+2026-01-04,London South,factory,290.126,94,1
+2026-01-04,London South,hospital,683.295,284,3
+2026-01-04,London South,office,365.769,1142,12
+2026-01-04,London South,residential,290.789,847,9
+2026-01-04,London South,school,130.924,849,9
+2026-01-04,Lyon,factory,294.509,95,1
+2026-01-04,Lyon,hospital,352.95,191,2
+2026-01-04,Lyon,office,455.799,1323,14
+2026-01-04,Lyon,residential,497.507,1323,14
+2026-01-04,Lyon,retail,288.87,565,6
+2026-01-04,Lyon,school,74.571,467,5
+2026-01-04,Madrid,factory,575.653,283,3
+2026-01-04,Madrid,hospital,920.243,469,5
+2026-01-04,Madrid,residential,554.626,1511,16
+2026-01-04,Madrid,retail,194.208,380,4
+2026-01-04,Madrid,school,93.858,655,7
+2026-01-04,Manchester,factory,1340.741,477,5
+2026-01-04,Manchester,hospital,2123.521,946,10
+2026-01-04,Manchester,office,254.038,858,9
+2026-01-04,Manchester,residential,650.517,1603,17
+2026-01-04,Manchester,retail,475.532,947,10
+2026-01-04,Manchester,school,42.786,191,2
+2026-01-04,Munich,factory,279.675,92,1
+2026-01-04,Munich,hospital,1616.837,853,9
+2026-01-04,Munich,office,178.909,563,6
+2026-01-04,Munich,residential,474.527,1318,14
+2026-01-04,Munich,retail,144.962,285,3
+2026-01-04,Munich,school,122.506,752,8
+2026-01-04,Paris,factory,875.805,284,3
+2026-01-04,Paris,hospital,1273.663,571,6
+2026-01-04,Paris,office,191.896,759,8
+2026-01-04,Paris,residential,425.659,1229,13
+2026-01-04,Paris,retail,254.423,471,5
+2026-01-04,Paris,school,44.995,378,4
+2026-01-05,Barcelona,factory,851.571,377,4
+2026-01-05,Barcelona,hospital,1619.425,852,9
+2026-01-05,Barcelona,office,1233.357,1893,20
+2026-01-05,Barcelona,residential,928.608,2838,30
+2026-01-05,Barcelona,retail,490.965,846,9
+2026-01-05,Barcelona,school,58.389,286,3
+2026-01-05,Berlin,factory,2336.532,946,10
+2026-01-05,Berlin,hospital,356.75,190,2
+2026-01-05,Berlin,office,255.359,473,5
+2026-01-05,Berlin,residential,1135.815,2838,30
+2026-01-05,Berlin,retail,415.653,660,7
+2026-01-05,Berlin,school,223.045,853,9
+2026-01-05,Birmingham,factory,1337.335,476,5
+2026-01-05,Birmingham,office,145.62,284,3
+2026-01-05,Birmingham,residential,581.783,1508,16
+2026-01-05,Birmingham,school,167.737,664,7
+2026-01-05,London North,factory,1032.769,377,4
+2026-01-05,London North,hospital,1546.199,859,9
+2026-01-05,London North,office,108.743,188,2
+2026-01-05,London North,residential,500.439,1321,14
+2026-01-05,London North,retail,334.38,659,7
+2026-01-05,London North,school,178.635,662,7
+2026-01-05,London South,factory,288.351,93,1
+2026-01-05,London South,hospital,687.155,285,3
+2026-01-05,London South,office,701.079,1142,12
+2026-01-05,London South,residential,289.771,849,9
+2026-01-05,London South,school,205.938,849,9
+2026-01-05,Lyon,factory,291.449,94,1
+2026-01-05,Lyon,hospital,353.151,190,2
+2026-01-05,Lyon,office,850.459,1322,14
+2026-01-05,Lyon,residential,502.939,1321,14
+2026-01-05,Lyon,retail,333.995,568,6
+2026-01-05,Lyon,school,120.315,473,5
+2026-01-05,Madrid,factory,584.688,284,3
+2026-01-05,Madrid,hospital,920.336,468,5
+2026-01-05,Madrid,residential,558.296,1519,16
+2026-01-05,Madrid,retail,217.295,376,4
+2026-01-05,Madrid,school,178.407,656,7
+2026-01-05,Manchester,factory,1327.343,473,5
+2026-01-05,Manchester,hospital,2126.06,944,10
+2026-01-05,Manchester,office,474.112,855,9
+2026-01-05,Manchester,residential,651.401,1603,17
+2026-01-05,Manchester,retail,531.053,950,10
+2026-01-05,Manchester,school,56.003,190,2
+2026-01-05,Munich,factory,284.561,92,1
+2026-01-05,Munich,hospital,1607.611,849,9
+2026-01-05,Munich,office,326.736,570,6
+2026-01-05,Munich,residential,474.173,1319,14
+2026-01-05,Munich,retail,166.396,282,3
+2026-01-05,Munich,school,207.427,752,8
+2026-01-05,Paris,factory,869.069,284,3
+2026-01-05,Paris,hospital,1260.268,567,6
+2026-01-05,Paris,office,349.422,759,8
+2026-01-05,Paris,residential,425.576,1225,13
+2026-01-05,Paris,retail,280.196,474,5
+2026-01-05,Paris,school,86.105,379,4
+2026-01-06,Barcelona,factory,855.223,377,4
+2026-01-06,Barcelona,hospital,1617.746,850,9
+2026-01-06,Barcelona,office,1234.632,1884,20
+2026-01-06,Barcelona,residential,927.746,2830,30
+2026-01-06,Barcelona,retail,486.375,850,9
+2026-01-06,Barcelona,school,57.436,284,3
+2026-01-06,Berlin,factory,2340.351,942,10
+2026-01-06,Berlin,hospital,352.465,189,2
+2026-01-06,Berlin,office,252.918,472,5
+2026-01-06,Berlin,residential,1136.657,2844,30
+2026-01-06,Berlin,retail,419.903,662,7
+2026-01-06,Berlin,school,222.876,847,9
+2026-01-06,Birmingham,factory,1315.118,471,5
+2026-01-06,Birmingham,office,145.27,285,3
+2026-01-06,Birmingham,residential,576.573,1501,16
+2026-01-06,Birmingham,school,167.656,659,7
+2026-01-06,London North,factory,1034.011,380,4
+2026-01-06,London North,hospital,1526.16,853,9
+2026-01-06,London North,office,108.328,191,2
+2026-01-06,London North,residential,499.635,1328,14
+2026-01-06,London North,retail,338.101,662,7
+2026-01-06,London North,school,175.419,656,7
+2026-01-06,London South,factory,300.791,96,1
+2026-01-06,London South,hospital,685.825,286,3
+2026-01-06,London South,office,700.308,1137,12
+2026-01-06,London South,residential,294.554,849,9
+2026-01-06,London South,school,204.904,847,9
+2026-01-06,Lyon,factory,285.11,93,1
+2026-01-06,Lyon,hospital,353.284,188,2
+2026-01-06,Lyon,office,850.56,1329,14
+2026-01-06,Lyon,residential,498.415,1324,14
+2026-01-06,Lyon,retail,332.265,567,6
+2026-01-06,Lyon,school,120.925,469,5
+2026-01-06,Madrid,factory,579.144,284,3
+2026-01-06,Madrid,hospital,925.023,472,5
+2026-01-06,Madrid,residential,555.581,1509,16
+2026-01-06,Madrid,retail,218.551,377,4
+2026-01-06,Madrid,school,181.978,662,7
+2026-01-06,Manchester,factory,1332.814,474,5
+2026-01-06,Manchester,hospital,2122.901,943,10
+2026-01-06,Manchester,office,468.3,852,9
+2026-01-06,Manchester,residential,655.463,1602,17
+2026-01-06,Manchester,retail,532.221,948,10
+2026-01-06,Manchester,school,55.513,192,2
+2026-01-06,Munich,factory,290.641,94,1
+2026-01-06,Munich,hospital,1599.311,842,9
+2026-01-06,Munich,office,323.66,565,6
+2026-01-06,Munich,residential,474.776,1318,14
+2026-01-06,Munich,retail,166.402,279,3
+2026-01-06,Munich,school,207.876,755,8
+2026-01-06,Paris,factory,882.064,286,3
+2026-01-06,Paris,hospital,1264.546,567,6
+2026-01-06,Paris,office,349.25,755,8
+2026-01-06,Paris,residential,428.009,1230,13
+2026-01-06,Paris,retail,277.989,474,5
+2026-01-06,Paris,school,85.834,379,4
+2026-01-07,Barcelona,factory,853.045,378,4
+2026-01-07,Barcelona,hospital,1616.333,847,9
+2026-01-07,Barcelona,office,1238.093,1892,20
+2026-01-07,Barcelona,residential,916.795,2823,30
+2026-01-07,Barcelona,retail,492.774,854,9
+2026-01-07,Barcelona,school,57.52,284,3
+2026-01-07,Berlin,factory,2354.038,942,10
+2026-01-07,Berlin,hospital,349.145,188,2
+2026-01-07,Berlin,office,256.45,477,5
+2026-01-07,Berlin,residential,1136.02,2840,30
+2026-01-07,Berlin,retail,412.391,660,7
+2026-01-07,Berlin,school,221.448,853,9
+2026-01-07,Birmingham,factory,1334.965,478,5
+2026-01-07,Birmingham,office,146.075,286,3
+2026-01-07,Birmingham,residential,583.726,1507,16
+2026-01-07,Birmingham,school,168.933,663,7
+2026-01-07,London North,factory,1020.852,375,4
+2026-01-07,London North,hospital,1527.505,852,9
+2026-01-07,London North,office,106.57,188,2
+2026-01-07,London North,residential,493.312,1317,14
+2026-01-07,London North,retail,338.406,667,7
+2026-01-07,London North,school,178.498,665,7
+2026-01-07,London South,factory,291.608,96,1
+2026-01-07,London South,hospital,664.831,277,3
+2026-01-07,London South,office,699.565,1133,12
+2026-01-07,London South,residential,293.812,848,9
+2026-01-07,London South,school,204.095,846,9
+2026-01-07,Lyon,factory,282.152,93,1
+2026-01-07,Lyon,hospital,341.106,188,2
+2026-01-07,Lyon,office,845.709,1322,14
+2026-01-07,Lyon,residential,499.16,1329,14
+2026-01-07,Lyon,retail,327.307,565,6
+2026-01-07,Lyon,school,121.976,473,5
+2026-01-07,Madrid,factory,579.647,280,3
+2026-01-07,Madrid,hospital,922.287,471,5
+2026-01-07,Madrid,residential,552.779,1509,16
+2026-01-07,Madrid,retail,215.276,376,4
+2026-01-07,Madrid,school,180.84,664,7
+2026-01-07,Manchester,factory,1331.698,475,5
+2026-01-07,Manchester,hospital,2128.997,947,10
+2026-01-07,Manchester,office,470.225,852,9
+2026-01-07,Manchester,residential,652.838,1610,17
+2026-01-07,Manchester,retail,531.845,953,10
+2026-01-07,Manchester,school,56.333,191,2
+2026-01-07,Munich,factory,285.62,93,1
+2026-01-07,Munich,hospital,1606.89,848,9
+2026-01-07,Munich,office,322.781,563,6
+2026-01-07,Munich,residential,467.218,1311,14
+2026-01-07,Munich,retail,164.657,286,3
+2026-01-07,Munich,school,210.207,757,8
+2026-01-07,Paris,factory,872.799,283,3
+2026-01-07,Paris,hospital,1254.425,566,6
+2026-01-07,Paris,office,345.706,755,8
+2026-01-07,Paris,residential,433.754,1236,13
+2026-01-07,Paris,retail,285.413,471,5
+2026-01-07,Paris,school,85.672,380,4
