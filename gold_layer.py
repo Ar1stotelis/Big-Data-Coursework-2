@@ -52,7 +52,7 @@ def meter_completeness(spark, clean):
                                     / F.col("readings_expected"), 1)))
         .withColumn("status",
                     F.when(F.col("readings_received") == 0, "no_data")
-                    .when(F.col("completeness_pct") >= 95, "complete")
+                    .when(F.col("completeness_pct") >= 90, "complete")
                     .otherwise("partial"))
         .orderBy("reading_date", "meter_id")
     )

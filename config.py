@@ -38,7 +38,7 @@ ALLOWED_READING_TYPES = ["actual", "estimated", "corrected", "manual_estimate"]
 # A reading is a correction and supersedes other values when it comes from
 CORRECTION_SOURCE_SYSTEMS = "manual_correction"
 MIN_ENERGY_KWH = 0.0 # no negatives
-MAX_ENERGY_KWH = 118.0 # Need to further check data
+MAX_ENERGY_KWH = 50.0 # Need to further check data
 METER_STATUS_ACTIVE = "active"
 MAX_PLAUSIBLE_DATE = "2030-01-01 00:00:00" # no future or broken timestamps
 MINUTES_IN_DAY = 24*60
