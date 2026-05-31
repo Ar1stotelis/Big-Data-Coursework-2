@@ -62,20 +62,25 @@ def main():
     rows_clean = clean.count()
     rows_rejected = rejected.count()
     silver_layer.write_clean(clean)
-    silver_layer.write_rejected(rejected)
-
-    # GOLD
     print("Building gold layer...")
     gold_daily = gold_layer.daily_consumption(clean)
     gold_complete = gold_layer.meter_completeness(spark, clean)
     gold_peak = gold_layer.peak_demand(clean)
-    gold_rej = gold_layer.rejected_summary(rejected)
+    gold_rejections = gold_layer.rejected_summary(rejected)
     gold_health = gold_layer.meter_health(spark, clean, rejected, dup_counts)
     gold_layer.write(gold_daily, "daily_consumption")
     gold_layer.write(gold_complete, "meter_completeness")
     gold_layer.write(gold_peak, "peak_demand")
-    gold_layer.write(gold_rej, "rejected_summary")
+    gold_layer.write(gold_rejections, "rejected_summary")
     gold_layer.write(gold_health, "meter_health")
+
+        # Also export single clean CSVs (for Power BI / BI tools) alongside Parquet.
+    for df_g, nm in [(gold_daily, "daily_consumption"),
+                    (gold_complete, "meter_completeness"),
+                    (gold_peak, "peak_demand"),
+                    (gold_rejections, "rejected_summary"),
+                    (gold_health, "meter_health")]:
+        gold_layer.write_csv(df_g, nm)
     # control and tracking
 
     print("Recording control tables...")
@@ -93,10 +98,12 @@ def main():
     })
 
     # PREVIEWS
+    runs_df = spark.read.parquet(config.CONTROL_RUNS)
+    gold_layer.write_csv(runs_df, "pipeline_runs", out_dir=config.GOLD_DIR + "/_csv")
     print(f"\nrows_in (this run) = {rows_in} | clean (total) = {rows_clean} | "
             f"rejected (total) = {rows_rejected}")
     print(f"\n{'-'*10}  rejected_summary {'-'*10} ")
-    gold_rej.show(truncate=False)
+    gold_rejections.show(truncate=False)
     print(f"\n{'-'*10} daily_consumption (sample) {'-'*10} ")
     gold_daily.show(10, truncate=False)
     print(f"\n{'-'*10}  meter_health (least reliable 10) {'-'*10} ")

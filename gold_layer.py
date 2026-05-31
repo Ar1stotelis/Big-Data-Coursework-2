@@ -131,3 +131,24 @@ def meter_health(spark, clean, rejected, dup_counts):
 
 def write(df, name):
     df.write.mode("overwrite").parquet(config.GOLD_DIR + "/" + name)
+
+
+def write_csv(df, name, out_dir=None):
+    # put in single parquet file, then move
+    # out to gold/_csv/<name>.csv that power bi can read directly
+    import glob, os, shutil
+    if out_dir is None:
+        out_dir = os.path.join(config.GOLD_DIR, "_csv")
+    tmp_dir = os.path.join(out_dir, name + "_tmp")
+    os.makedirs(out_dir, exist_ok=True)
+
+    (df.coalesce(1).write.mode("overwrite")
+        .option("header", True).csv(tmp_dir))
+
+    part = glob.glob(os.path.join(tmp_dir, "part-*.csv"))[0]
+    final = os.path.join(out_dir, name + ".csv")
+    if os.path.exists(final):
+        os.remove(final)
+    shutil.move(part, final)
+    shutil.rmtree(tmp_dir)
+    return final
