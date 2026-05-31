@@ -43,3 +43,8 @@ METER_STATUS_ACTIVE = "active"
 MAX_PLAUSIBLE_DATE = "2030-01-01 00:00:00" # no future or broken timestamps
 MINUTES_IN_DAY = 24*60
 READING_KEY_FIELDS = ["meter_id", "reading_timestamp"] # used for deduplication and corrections
+
+# gold reporting thresholds
+COMPLETENESS_THRESHOLD_PCT = 90
+REJECT_RATE_CEILING_PCT = 5
+WATCH_FLOOR_PCT = 70

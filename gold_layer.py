@@ -52,7 +52,7 @@ def meter_completeness(spark, clean):
                                     / F.col("readings_expected"), 1)))
         .withColumn("status",
                     F.when(F.col("readings_received") == 0, "no_data")
-                    .when(F.col("completeness_pct") >= 90, "complete")
+                    .when(F.col("completeness_pct") >= config.COMPLETENESS_THRESHOLD_PCT, "complete")
                     .otherwise("partial"))
         .orderBy("reading_date", "meter_id")
     )
@@ -116,9 +116,9 @@ def meter_health(spark, clean, rejected, dup_counts):
         # work out if a meter is reliable, it needs most of its expected readings and a low reject rate
         .withColumn("reliability_flag",
                     F.when(F.col("n_accepted") == 0, "no_data")
-                    .when((F.col("completeness_pct") >= 90)
-                        & (F.col("reject_rate_pct") <= 5), "reliable")
-                    .when(F.col("completeness_pct") >= 70, "watch")
+                    .when((F.col("completeness_pct") >= config.COMPLETENESS_THRESHOLD_PCT)
+                        & (F.col("reject_rate_pct") <= config.REJECT_RATE_CEILING_PCT), "reliable")
+                    .when(F.col("completeness_pct") >= config.WATCH_FLOOR_PCT, "watch")
                     .otherwise("unreliable"))
         .select("meter_id", "building_id", "meter_status",
                 "readings_expected", "n_accepted", "completeness_pct",
